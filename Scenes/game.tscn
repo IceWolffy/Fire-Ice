@@ -1,7 +1,38 @@
-[gd_scene format=3 uid="uid://kjpsphrvl4lv"]
+[gd_scene load_steps=6 format=3 uid="uid://kjpsphrvl4lv"]
+
+[ext_resource type="PackedScene" uid="uid://kcvdf6fm201q" path="res://Players/player_dark.tscn" id="1_r8cxm"]
+[ext_resource type="PackedScene" uid="uid://b2a67atgnxd2w" path="res://Players/player_white.tscn" id="2_edkfb"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_madcj"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_vxuau"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hyvn5"]
+size = Vector2(1098, 20)
 
 [node name="Game" type="Node2D"]
 
-[node name="PlayerWhite" type="CharacterBody2D" parent="."]
+[node name="PlayerDark" parent="." instance=ExtResource("1_r8cxm")]
+position = Vector2(503, 314)
 
-[node name="PlayerDark" type="CharacterBody2D" parent="."]
+[node name="PlayerWhite" parent="." instance=ExtResource("2_edkfb")]
+position = Vector2(560, 314)
+disable_mode = 1
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(497, 327)
+physics_material_override = SubResource("PhysicsMaterial_madcj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+modulate = Color(0.819608, 0.580392, 0.85098, 0.478431)
+material = SubResource("CanvasItemMaterial_vxuau")
+position = Vector2(101, 13)
+shape = SubResource("RectangleShape2D_hyvn5")
+debug_color = Color(0.768627, 0, 0, 0.321569)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(531, 330)
+limit_left = 0
+limit_top = 0
+limit_right = 1150
+limit_bottom = 650
