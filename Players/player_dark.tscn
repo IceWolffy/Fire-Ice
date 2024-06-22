@@ -161,4 +161,4 @@ shape = SubResource("RectangleShape2D_syseo")
 position = Vector2(0, 3)
 sprite_frames = SubResource("SpriteFrames_h1ys8")
 animation = &"jump"
-frame_progress = 0.653103
+frame_progress = 0.579302
