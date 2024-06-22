@@ -1,6 +1,7 @@
-[gd_scene load_steps=24 format=3 uid="uid://b2a67atgnxd2w"]
+[gd_scene load_steps=25 format=3 uid="uid://b2a67atgnxd2w"]
 
 [ext_resource type="Texture2D" uid="uid://bn4jvlhrfnxjs" path="res://textures/Base Character - Free/idle.png" id="1_5bdx2"]
+[ext_resource type="Script" path="res://Players/player_white.gd" id="1_ty3dp"]
 [ext_resource type="Texture2D" uid="uid://bnniuwipgyy75" path="res://textures/Base Character - Free/jump.png" id="2_xe2rf"]
 [ext_resource type="Texture2D" uid="uid://cw26px0ei0va6" path="res://textures/Base Character - Free/walk.png" id="3_dqtd2"]
 
@@ -95,7 +96,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_xbmgo")
 }],
 "loop": true,
-"name": &"idle",
+"name": &"idle1",
 "speed": 8.0
 }, {
 "frames": [{
@@ -118,7 +119,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_cu13s")
 }],
 "loop": true,
-"name": &"jump",
+"name": &"jump1",
 "speed": 8.0
 }, {
 "frames": [{
@@ -147,18 +148,19 @@ animations = [{
 "texture": SubResource("AtlasTexture_vd6hj")
 }],
 "loop": true,
-"name": &"walk",
+"name": &"walk1",
 "speed": 11.0
 }]
 
 [node name="PlayerWhite" type="CharacterBody2D"]
+script = ExtResource("1_ty3dp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 1.5)
 shape = SubResource("RectangleShape2D_thtt2")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D1" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, 3)
 sprite_frames = SubResource("SpriteFrames_4clct")
-animation = &"jump"
-frame_progress = 0.685998
+animation = &"walk1"
+frame_progress = 0.0996277
