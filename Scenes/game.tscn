@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://kjpsphrvl4lv"]
+
+[node name="Game" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
