@@ -5,3 +5,11 @@
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 
 [node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 1249.0
+offset_bottom = 611.0
+theme_override_font_sizes/font_size = 90
+text = "loh"
+horizontal_alignment = 1
+vertical_alignment = 1
