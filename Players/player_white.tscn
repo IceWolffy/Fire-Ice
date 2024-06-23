@@ -152,18 +152,17 @@ animations = [{
 "speed": 11.0
 }]
 
-[node name="PlayerWhite" type="CharacterBody2D"]
+[node name="PlayerWhite" type="CharacterBody2D" groups=["Players"]]
 collision_layer = 2
-collision_mask = 3
 script = ExtResource("1_ty3dp")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Players"]]
 light_mask = 0
 visibility_layer = 0
 position = Vector2(0.5, 1.5)
 shape = SubResource("RectangleShape2D_thtt2")
 
-[node name="AnimatedSprite2D1" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D1" type="AnimatedSprite2D" parent="." groups=["Players"]]
 position = Vector2(0, 3)
 sprite_frames = SubResource("SpriteFrames_4clct")
 animation = &"walk1"
