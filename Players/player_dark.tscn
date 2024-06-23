@@ -153,9 +153,13 @@ animations = [{
 }]
 
 [node name="PlayerDark" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 3
 script = ExtResource("1_adgn5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 0
+visibility_layer = 0
 position = Vector2(0.5, 1.5)
 shape = SubResource("RectangleShape2D_syseo")
 

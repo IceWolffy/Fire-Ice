@@ -1,0 +1,13 @@
+extends Node2D
+
+@onready var next_scene : String
+# Called when the node enters the scene tree for the first time.
+
+
+func _on_area_2d_body_entered(body):
+	if body.is_in_group("Player"):
+		var player = body as CharacterBody2D
+		player.queue_free()
+	
+	await get_tree().create_timer(1.0).timeout
+	SceneManager.transition_to_scene(next_scene)
