@@ -9,7 +9,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var animated_sprite = $AnimatedSprite2D
 
-func _physics_process(delta):
+func _physics_process(delta): //cod care face jucatorul sa zboara
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
